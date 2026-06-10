@@ -22,16 +22,16 @@ All brand colours are CSS variables at the top of `styles.css`:
 
 ```css
 :root {
-  --bg: #060b14;       /* page background                    */
-  --alive: #46c878;    /* brand green — buttons / "alive"    */
-  --blue: #4f86d6;     /* brand blue — pulse line / wordmark */
-  --dead: #ff3d5a;     /* red "flatline" accent              */
+  --bg: #ffffff;       /* page background                    */
+  --alive: #3cb56e;    /* brand green — buttons / "alive"    */
+  --blue: #3a6ab8;     /* brand blue — pulse line / wordmark */
+  --dead: #e02d4b;     /* red "flatline" accent              */
 }
 ```
 
 The green and blue are matched to the Dead or Alive Technology logo
-(blue EKG pulse and wordmark, green action buttons) on a dark
-futuristic background.
+(blue EKG pulse and wordmark, green action buttons) on a clean white
+background.
 
 Change those values and the entire site updates.
 
