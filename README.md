@@ -22,12 +22,16 @@ All brand colours are CSS variables at the top of `styles.css`:
 
 ```css
 :root {
-  --bg: #05080d;       /* page background          */
-  --alive: #00e887;    /* primary neon-green accent */
-  --dead: #ff3d5a;     /* red "flatline" accent     */
-  --cyan: #25c9ff;     /* secondary accent          */
+  --bg: #060b14;       /* page background                    */
+  --alive: #46c878;    /* brand green — buttons / "alive"    */
+  --blue: #4f86d6;     /* brand blue — pulse line / wordmark */
+  --dead: #ff3d5a;     /* red "flatline" accent              */
 }
 ```
+
+The green and blue are matched to the Dead or Alive Technology logo
+(blue EKG pulse and wordmark, green action buttons) on a dark
+futuristic background.
 
 Change those values and the entire site updates.
 
@@ -48,4 +52,19 @@ Change those values and the entire site updates.
 ```sh
 python3 -m http.server 8000
 # then open http://localhost:8000
+```
+
+## Testing
+
+`tests/abc-test.js` is an automated A/B/C cross-viewport suite
+(A = desktop 1440px, B = tablet 768px, C = mobile 390px) that checks:
+horizontal overflow, scroll-reveal visibility, stat counter animation,
+hamburger menu open/navigate/close, desktop nav scrolling, form
+validation, the mailto handoff, mobile tap-target sizes, and console
+errors.
+
+```sh
+npm install playwright            # one-off
+python3 -m http.server 8123 &     # serve the site
+node tests/abc-test.js            # run the suite
 ```
